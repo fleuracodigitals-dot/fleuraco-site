@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="p:domain_verify" content="8321ea95439865f74f0ee4a55a1aca4d" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fleuraco</title>
-  </head>
-  <body>
-    <h1>Welcome to Fleuraco</h1>
-    <p>Check out my products <a href="https://fleuraco.gumroad.com">on Gumroad</a>.</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="p:domain_verify" content="8321ea95439865f74f0ee4a55a1aca4d" />
+  <title>Fleura Co</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    /* Reset and base */
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f6f1; /* whitish beige */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border: 3px solid #000; /* black frame */
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 350px;
+      max-width: 90vw;
+      text-align: center;
+      box-sizing: border-box;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    h1 {
+      margin: 0 0 25px 0;
+      font-weight: 600;
+      font-size: 2.5rem;
+      color: #000;
+      letter-spacing: 2px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 400px) {
+      .container {
+        padding: 30px 20px;
+        width: 90vw;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 13px 15px;
+      }
+      .logo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Replace the src below with your actual logo image URL or file path -->
+    <img src="https://via.placeholder.com/120?text=Logo" alt="Fleura Co Logo" class="logo" />
+
+    <h1>Fleura Co</h1>
+
+    <div class="buttons">
+      <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">Shop Notion Templates</a>
+      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Newsletter / Blog</a>
+      <a href="https://instagram.com/yourprofile" class="btn" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+  </div>
+</body>
 </html>
