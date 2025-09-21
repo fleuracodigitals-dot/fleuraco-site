@@ -3,85 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fleura Co - Free Templates</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=The+Seasons&display=swap" rel="stylesheet">
+  <title>Free Notion Templates – Fleura Co</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif+Display:wght@400&family=The+Seasons&display=swap');
+  </style>
+
   <style>
     body {
-      font-family: 'Noto Serif Display', serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       background-color: #f9f6f1;
     }
 
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      border: 3px solid #000;
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
     h1 {
-      text-align: center;
       font-family: 'The Seasons', serif;
       font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-family: 'Noto Serif Display', serif;
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .nav a.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
     }
 
     .product {
-      background: white;
-      border: 2px solid #000;
+      background-color: #fefefe;
+      border: 1px solid #ccc;
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .product img {
       width: 100%;
-      border-radius: 6px;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     .product h2 {
-      font-size: 1.5rem;
-      margin: 15px 0 10px;
+      font-size: 1.4rem;
+      margin: 0 0 10px;
     }
 
     .product p {
-      color: #333;
-      margin-bottom: 15px;
-      line-height: 1.6;
+      margin: 0 0 15px;
+      color: #444;
+      font-size: 0.95rem;
     }
 
     .btn {
-      display: inline-block;
-      background-color: #000;
-      color: #fff;
+      background-color: #e8ded1;
+      color: #000;
+      text-decoration: none;
       padding: 12px 18px;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: inline-block;
     }
 
     .btn:hover {
-      background-color: #444;
+      background-color: #ddd1c2;
+      transform: scale(1.02);
     }
   </style>
 </head>
 
 <body>
-  <h1>Free Notion Templates</h1>
+  <div class="container">
+    <h1>Free Notion Templates</h1>
+    <p class="subheading">Curated templates to help you stay organised</p>
 
-  <div class="product">
-    <img src="images/product1.jpg" alt="Minimal Daily Planner" />
-    <h2>Weekly Reset</h2>
-    <p>This clean and aesthetic Notion daily planner helps you stay organized with your top priorities, tasks, and schedule.</p>
-    <a href="https://your-link.com" class="btn" target="_blank">Download Free</a>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="product.html" class="active">Free Notion Templates</a>
+    </div>
+
+    <!-- Example Product -->
+    <div class="product">
+      <img src="weekly planner.png" alt="Weekly Planner" />
+      <h2>Aesthetic Weekly Planner</h2>
+      <p>This free Notion template helps you plan your week in a simple, aesthetic layout.</p>
+      <a href="https://fleuraco.gumroad.com/l/zngecl?layout=profile" class="btn" target="_blank">Download Template</a>
+    </div>
+
+    <!-- Duplicate this section for more products -->
+    <div class="product">
+      <img src="weekly reset.png" alt="Weekly Reset" />
+      <h2>Weekly reset</h2>
+      <p>Track your habits and stay consistent with this weekly routine and checklist.</p>
+      <a href="https://fleuraco.gumroad.com/l/dfadc?layout=profile" class="btn" target="_blank">Download Template</a>
+    </div>
   </div>
-
-  <div class="product">
-    <img src="images/product2.jpg" alt="Weekly Reflection Journal" />
-    <h2>Goals Tracker</h2>
-    <p>Reflect on your wins, lessons, and intentions every week with this thoughtful and calming Notion template.</p>
-    <a href="https://your-link.com" class="btn" target="_blank">Download Free</a>
-  </div>
-
-  <!-- Add more products below as needed -->
 </body>
 </html>
+
