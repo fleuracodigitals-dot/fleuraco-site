@@ -8,13 +8,13 @@
 
   <!-- Google Fonts -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400&family=Poppins:wght@600&family=The+Seasons&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif+Display:wght@400&family=The+Seasons&display=swap');
   </style>
 
   <style>
     body, html {
       margin: 0; padding: 0; height: 100%;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f9f6f1;
       display: flex;
       justify-content: center;
@@ -26,12 +26,12 @@
       background: white;
       border: 3px solid #000;
       border-radius: 12px;
-      padding: 40px 30px;
-      width: 350px;
-      max-width: 90vw;
+      padding: 50px 40px;
+      width: 420px; /* Increased width */
+      max-width: 95vw;
       text-align: center;
       box-sizing: border-box;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .logo {
@@ -55,7 +55,7 @@
       font-family: 'Noto Serif Display', serif;
       font-size: 1rem;
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       letter-spacing: 1px;
     }
 
@@ -66,18 +66,20 @@
     }
 
     .btn {
-      background-color: #000;
-      color: #fff;
+      background-color: #e8ded1; /* soft beige */
+      color: #000;
       text-decoration: none;
-      padding: 15px 20px;
+      padding: 14px 18px;
       border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+      font-size: 1.05rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .btn:hover {
-      background-color: #444;
+      background-color: #ddd1c2;
+      transform: scale(1.02);
     }
 
     @media (max-width: 400px) {
@@ -117,9 +119,8 @@
       <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Newsletter / Blog</a>
       <a href="https://instagram.com/yourprofile" class="btn" target="_blank" rel="noopener">Instagram</a>
       <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Pinterest</a>
-      <a href="products.html" class="btn">Free Notion Templates</a> <!-- Link to new page -->
+      <a href="product.html" class="btn">Free Notion Templates</a> <!-- ✅ Fixed link -->
     </div>
   </div>
 </body>
 </html>
-
