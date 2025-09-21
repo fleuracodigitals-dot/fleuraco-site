@@ -27,7 +27,7 @@
       border: 3px solid #000;
       border-radius: 12px;
       padding: 50px 40px;
-      width: 420px; /* Increased width */
+      width: 420px;
       max-width: 95vw;
       text-align: center;
       box-sizing: border-box;
@@ -55,8 +55,35 @@
       font-family: 'Noto Serif Display', serif;
       font-size: 1rem;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       letter-spacing: 1px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .nav a.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
     }
 
     .buttons {
@@ -66,7 +93,7 @@
     }
 
     .btn {
-      background-color: #e8ded1; /* soft beige */
+      background-color: #e8ded1;
       color: #000;
       text-decoration: none;
       padding: 14px 18px;
@@ -102,24 +129,29 @@
         height: 90px;
         margin-bottom: 15px;
       }
+      .nav {
+        gap: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <!-- Replace with your actual logo path or URL -->
     <img src="Black%20Circle%20Modern%20Nails%20Studio%20Logo.png" alt="Fleura Co Logo" class="logo" />
-
     <h1>Fleura Co</h1>
     <p class="subheading">Notion Planners | Organisation | Productivity</p>
+
+    <div class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="product.html">Free Notion Templates</a>
+    </div>
 
     <div class="buttons">
       <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">Shop Notion Templates</a>
       <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Newsletter / Blog</a>
-      <a href="https://instagram.com/yourprofile" class="btn" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Instagram</a>
       <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Pinterest</a>
-      <a href="product.html" class="btn">Free Notion Templates</a> <!-- ✅ Fixed link -->
     </div>
   </div>
 </body>
