@@ -13,9 +13,14 @@
 
   <style>
     body, html {
-      margin: 0; padding: 0; height: 100%;
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f6f1;
+      background-image: url('background.jpg'); /* Replace with your actual image path */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,7 +28,7 @@
     }
 
     .container {
-      background: white;
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
       border: 3px solid #000;
       border-radius: 12px;
       padding: 50px 40px;
