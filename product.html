@@ -5,24 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Free Notion Templates – Fleura Co</title>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif+Display:wght@400&family=The+Seasons&display=swap');
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif+Display:wght@400&family=The+Seasons&display=swap" rel="stylesheet" />
 
-    body {
-      font-family: 'Inter', sans-serif;
+  <style>
+    body, html {
       margin: 0;
-      padding: 40px 20px;
-      background-color: #f9f6f1;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 420px;
+      width: 95vw;
       margin: 0 auto;
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       border: 3px solid #000;
       border-radius: 12px;
-      padding: 40px 30px;
+      padding: 50px 40px;
+      box-sizing: border-box;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
     .header {
@@ -43,13 +55,13 @@
       font-family: 'The Seasons', serif;
       font-size: 2.5rem;
       margin: 0;
+      font-weight: 400;
     }
 
     .subheading {
       font-family: 'Noto Serif Display', serif;
       font-size: 1rem;
       color: #555;
-      text-align: center;
       margin-bottom: 30px;
     }
 
@@ -80,17 +92,7 @@
       background-color: #000;
     }
 
-    .product-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
-    }
-
     .product {
-      background-color: #fefefe;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
       margin-bottom: 30px;
     }
 
@@ -101,31 +103,52 @@
     }
 
     .product h2 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin: 0 0 10px;
+      font-weight: 600;
     }
 
     .product p {
       margin: 0 0 15px;
       color: #444;
-      font-size: 0.95rem;
-    }
-
-    .btn {
-      background-color: #e8ded1;
-      color: #000;
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 8px;
       font-size: 1rem;
-      font-weight: 500;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      display: inline-block;
+      font-family: 'Inter', sans-serif;
     }
 
-    .btn:hover {
-      background-color: #ddd1c2;
-      transform: scale(1.02);
+    .kit-embed {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 600px;
+      max-width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 30px 20px;
+        width: 90vw;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .subheading {
+        font-size: 0.9rem;
+      }
+      .nav {
+        gap: 20px;
+      }
+      .product h2 {
+        font-size: 1.4rem;
+      }
+      .product p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -143,28 +166,8 @@
       <a href="product.html" class="active">Free Notion Templates</a>
     </div>
 
-    <div class="product-container">
-      <!-- Product 1 -->
-      <div class="product">
-        <img src="weekly-planner.png" alt="Weekly Planner" />
-        <h2>Aesthetic Weekly Planner</h2>
-        <p>This free Notion template helps you plan your week in a simple, aesthetic layout.</p>
-        <a href="https://fleuraco.gumroad.com/l/zngecl?layout=profile" class="btn" target="_blank">Download Template</a>
-      </div>
+   
 
-      <!-- Product 2 -->
-      <div class="product">
-        <img src="weekly-reset.png" alt="Weekly Reset" />
-        <h2>Weekly Reset</h2>
-        <p>Track your habits and stay consistent with this weekly routine and checklist.</p>
-        <a href="https://fleuraco.gumroad.com/l/dfadc?layout=profile" class="btn" target="_blank">Download Template</a>
-      </div>
-
-      <!-- Add more products as needed -->
-    </div>
-  </div>
-</body>
-</html>
 
 
 
