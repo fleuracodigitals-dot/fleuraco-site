@@ -20,7 +20,7 @@
     }
 
     .container {
-      max-width: 680px;
+      max-width: 780px;
       width: 90vw;
       margin: 60px auto;
       background: rgba(255, 255, 255, 0.9);
@@ -30,12 +30,6 @@
       box-sizing: border-box;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
-      animation: scaleIn 0.5s ease-in-out;
-    }
-
-    @keyframes scaleIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
     }
 
     .header {
@@ -73,7 +67,6 @@
       margin-bottom: 40px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
-      position: relative;
     }
 
     .nav a {
@@ -104,34 +97,11 @@
       width: 100%;
     }
 
-    .product {
-      margin-bottom: 30px;
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .product h2 {
-      font-size: 1.6rem;
-      margin: 0 0 10px;
-      font-weight: 600;
-    }
-
-    .product p {
-      margin: 0 0 20px;
-      color: #444;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-    }
-
     .kit-embed {
       border: 1px solid #ccc;
       border-radius: 10px;
       overflow: hidden;
-      height: 450px; /* Reduced height so form is visible */
+      height: 460px; /* Adjust to show Kit form without scroll */
       max-width: 100%;
     }
 
@@ -147,12 +117,6 @@
       }
       h1 {
         font-size: 2rem;
-      }
-      .product h2 {
-        font-size: 1.4rem;
-      }
-      .product p {
-        font-size: 0.95rem;
       }
     }
   </style>
@@ -172,16 +136,11 @@
       <a href="product.html" class="active">Free Notion Templates</a>
     </div>
 
-    <div class="product">
-      <img src="weekly-reset.png" alt="Weekly Reset Template">
-      <h2>Weekly Reset Planner</h2>
-      <p>Download this free Notion template to plan your week, reset your space, and stay mindful with an easy self-care aesthetic layout.</p>
-    </div>
-
     <div class="kit-embed">
       <iframe src="https://fleura-co.kit.com/01a505a79f" title="Freebie Email Form – Weekly Reset"></iframe>
     </div>
   </div>
 </body>
 </html>
+
 
