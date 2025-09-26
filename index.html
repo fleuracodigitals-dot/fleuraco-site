@@ -13,16 +13,12 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100vh;
       font-family: 'Inter', sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
     }
 
     .container {
@@ -32,9 +28,20 @@
       padding: 50px 40px;
       width: 420px;
       max-width: 95vw;
+      margin: 60px auto;
       text-align: center;
       box-sizing: border-box;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
@@ -62,6 +69,14 @@
       letter-spacing: 1px;
     }
 
+    .welcome-text {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 30px;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
     .nav {
       display: flex;
       justify-content: center;
@@ -69,6 +84,7 @@
       margin-bottom: 30px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
+      position: relative;
     }
 
     .nav a {
@@ -79,14 +95,23 @@
       padding-bottom: 5px;
     }
 
-    .nav a.active::after {
+    .nav a::after {
       content: "";
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
+      width: 0%;
       height: 2px;
       background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav a.active::after {
+      width: 100%;
     }
 
     .buttons {
@@ -149,6 +174,8 @@
       <a href="index.html" class="active">Home</a>
       <a href="product.html">Free Notion Templates</a>
     </div>
+
+    <p class="welcome-text">Hi, welcome to the Notion space! 🤍 Here you’ll find beautiful and functional templates and info to improve your life, reset your week, and stay organized with ease. Browse freely or check out the resources below to get started!</p>
 
     <div class="buttons">
       <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">Shop Notion Templates</a>
