@@ -17,11 +17,12 @@
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 780px;
-      width: 90vw;
+      max-width: 860px;
+      width: 95vw;
       margin: 60px auto;
       background: rgba(255, 255, 255, 0.9);
       border: 3px solid #000;
@@ -98,10 +99,10 @@
     }
 
     .kit-embed {
-      border: 1px solid #ccc;
       border-radius: 10px;
       overflow: hidden;
-      height: 460px; /* Adjust to show Kit form without scroll */
+      height: 580px; /* Adjust height as needed */
+      width: 100%;
       max-width: 100%;
     }
 
@@ -117,6 +118,9 @@
       }
       h1 {
         font-size: 2rem;
+      }
+      .nav {
+        gap: 20px;
       }
     }
   </style>
@@ -137,10 +141,15 @@
     </div>
 
     <div class="kit-embed">
-      <iframe src="https://fleura-co.kit.com/01a505a79f" title="Freebie Email Form – Weekly Reset"></iframe>
+      <iframe 
+        src="https://fleura-co.kit.com/01a505a79f" 
+        title="Weekly Reset Freebie Signup Form"
+        loading="lazy"
+      ></iframe>
     </div>
   </div>
 </body>
 </html>
+
 
 
