@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Notion Templates – Fleura Co</title>
+  <title>Free Templates – Fleura Co</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif+Display:wght@400&family=The+Seasons&display=swap" rel="stylesheet" />
 
   <style>
     body, html {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
     .container {
       display: flex;
       flex-direction: column;
       max-width: 960px;
       width: 95vw;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.95);
-      border: 3px solid #000;
-      border-radius: 12px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid #d8d1c4;
+      border-radius: 14px;
       padding: 50px 40px;
       box-sizing: border-box;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-align: center;
-      animation: fadeGrow 0.6s ease-out;
+      animation: fadeGrow 0.6s ease-out forwards;
       opacity: 0;
       transform: scale(0.95);
-      animation-fill-mode: forwards;
     }
 
     @keyframes fadeGrow {
@@ -51,7 +50,7 @@
       align-items: center;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .header img {
@@ -62,7 +61,7 @@
 
     h1 {
       font-family: 'The Seasons', serif;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       margin: 0;
       font-weight: 400;
     }
@@ -70,42 +69,51 @@
     .subheading {
       font-family: 'Noto Serif Display', serif;
       font-size: 1rem;
-      color: #555;
+      color: #6b6258;
       margin-bottom: 30px;
     }
 
     .nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
+      gap: 28px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e0dcd7;
+      padding-bottom: 8px;
     }
 
     .nav a {
       text-decoration: none;
-      color: #333;
+      color: #444;
       font-weight: 500;
       position: relative;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
     }
 
-    .nav a.active::after,
-    .nav a:hover::after {
+    .nav a::after {
       content: "";
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
+      width: 0%;
       height: 2px;
-      background-color: #000;
-      transition: all 0.3s ease;
+      background-color: #bfa98e;
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #000;
+    }
+
+    .nav a:hover::after,
+    .nav a.active::after {
+      width: 100%;
     }
 
     .kit-embed {
       width: 100%;
-      height: 800px; /* Adjusted for full Kit page */
+      height: 800px;
       border: 1px solid #ccc;
       border-radius: 10px;
       overflow: hidden;
@@ -116,6 +124,14 @@
       width: 100%;
       height: 100%;
       border: none;
+    }
+
+    iframe.substack-embed {
+      max-width: 100%;
+      height: 320px;
+      border: 1px solid #EEE;
+      border-radius: 8px;
+      margin-top: 25px;
     }
 
     @media (max-width: 768px) {
@@ -131,6 +147,12 @@
       .nav {
         gap: 20px;
       }
+      .kit-embed {
+        height: 600px;
+      }
+      iframe.substack-embed {
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -142,14 +164,14 @@
       <h1>Fleura Co</h1>
     </div>
 
-    <p class="subheading">Curated templates to help you stay organised</p>
+    <p class="subheading">soft productivity • digital systems • intentional living</p>
 
     <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="product.html" class="active">Free Notion Templates</a>
+      <a href="https://fleuradigitals-dot.github.io/fleuraco-site/index.html">Home</a>
+      <a href="product.html" class="active">Free Templates</a>
     </div>
 
-    <!-- Kit Embed Form -->
+    <!-- Weekly Reset Freebie -->
     <div class="kit-embed">
       <iframe 
         src="https://fleura-co.kit.com/01a505a79f" 
@@ -157,10 +179,26 @@
         loading="lazy"
       ></iframe>
     </div>
+
+    <!-- Vanilla Girl Study Planner Freebie -->
+    <div class="kit-embed">
+      <iframe 
+        src="https://fleura-co.kit.com/3e93bda4f1" 
+        title="Vanilla Girl Study Planner Freebie"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Optional Substack Embed -->
+    <iframe class="substack-embed" 
+      src="https://fleuraco.substack.com/embed" 
+      title="Subscribe to Fleura Co Newsletter"
+      frameborder="0" 
+      scrolling="no"
+    ></iframe>
+
   </div>
 </body>
 </html>
-
-
 
 
