@@ -22,16 +22,16 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.9);
-      border: 3px solid #000;
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid #d8d1c4;
+      border-radius: 14px;
       padding: 50px 40px;
       width: 420px;
       max-width: 95vw;
       margin: 60px auto;
       text-align: center;
       box-sizing: border-box;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 1s ease-out forwards;
@@ -45,17 +45,17 @@
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       object-fit: contain;
       margin: 0 auto 20px auto;
       display: block;
     }
 
     h1 {
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       font-family: 'The Seasons', serif;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       font-weight: 600;
       color: #000;
       letter-spacing: 2px;
@@ -64,35 +64,34 @@
     .subheading {
       font-family: 'Noto Serif Display', serif;
       font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
+      color: #6b6258;
+      margin-bottom: 22px;
       letter-spacing: 1px;
     }
 
     .welcome-text {
       font-size: 0.95rem;
       color: #444;
-      margin-bottom: 30px;
-      font-family: 'Inter', sans-serif;
+      margin-bottom: 35px;
       line-height: 1.6;
     }
 
     .nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      position: relative;
+      gap: 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e0dcd7;
+      padding-bottom: 8px;
     }
 
     .nav a {
       text-decoration: none;
-      color: #333;
+      color: #444;
       font-weight: 500;
       position: relative;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
     }
 
     .nav a::after {
@@ -102,8 +101,12 @@
       left: 0;
       width: 0%;
       height: 2px;
-      background-color: #000;
+      background-color: #bfa98e;
       transition: width 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #000;
     }
 
     .nav a:hover::after {
@@ -121,20 +124,26 @@
     }
 
     .btn {
-      background-color: #e8ded1;
+      background-color: #ebe3da;
       color: #000;
       text-decoration: none;
       padding: 14px 18px;
       border-radius: 8px;
       font-size: 1.05rem;
       font-weight: 500;
-      font-family: 'Inter', sans-serif;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .btn:hover {
-      background-color: #ddd1c2;
+      background-color: #e3d9ce;
       transform: scale(1.02);
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.85rem;
+      color: #777;
+      font-family: 'Noto Serif Display', serif;
     }
 
     @media (max-width: 400px) {
@@ -168,21 +177,27 @@
   <div class="container">
     <img src="Black%20Circle%20Modern%20Nails%20Studio%20Logo.png" alt="Fleura Co Logo" class="logo" />
     <h1>Fleura Co</h1>
-    <p class="subheading">Notion Planners | Organisation | Productivity</p>
+    <p class="subheading">soft productivity • digital systems • intentional living</p>
 
     <div class="nav">
       <a href="index.html" class="active">Home</a>
-      <a href="product.html">Free Notion Templates</a>
+      <a href="product.html">Free Templates</a>
     </div>
 
-    <p class="welcome-text">Hi, welcome to the Notion space! 🤍 Here you’ll find beautiful and functional templates and info to improve your life, reset your week, and stay organized with ease. Browse freely or check out the resources below to get started!</p>
+    <p class="welcome-text">
+      Welcome to Fleura Co 🌷<br>
+      A calm space for soft productivity, mindful organisation, and beautiful digital systems.  
+      Discover thoughtfully designed Notion templates and tools to help you plan, reset, and stay grounded with ease.
+    </p>
 
     <div class="buttons">
-      <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">Shop Notion Templates</a>
-      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Newsletter / Blog</a>
-      <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">🛍 Shop Templates</a>
+      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">💌 Substack Reads</a>
+      <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📸 Instagram</a>
+      <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📌 Pinterest</a>
     </div>
+
+    <footer>crafted with care ✿</footer>
   </div>
 </body>
 </html>
