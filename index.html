@@ -38,10 +38,7 @@
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .logo {
@@ -69,13 +66,17 @@
       letter-spacing: 1px;
     }
 
+    /* Intro description restored + italic soft serif */
     .welcome-text {
-      font-size: 0.95rem;
-      color: #444;
+      font-family: 'Noto Serif Display', serif;
+      font-style: italic;
+      font-size: 0.97rem;
+      color: #4a433c;
       margin-bottom: 25px;
       line-height: 1.6;
     }
 
+    /* Value bubble */
     .value-preview {
       font-size: 0.9rem;
       color: #5a534b;
@@ -117,18 +118,11 @@
       transition: width 0.3s ease;
     }
 
-    .nav a:hover {
-      color: #000;
-    }
+    .nav a:hover { color: #000; }
+    .nav a:hover::after { width: 100%; }
+    .nav a.active::after { width: 100%; }
 
-    .nav a:hover::after {
-      width: 100%;
-    }
-
-    .nav a.active::after {
-      width: 100%;
-    }
-
+    /* Button styling with neutral icons + spacing */
     .btn {
       background-color: #ebe3da;
       color: #000;
@@ -139,6 +133,8 @@
       font-weight: 500;
       transition: background-color 0.3s ease, transform 0.2s ease;
       display: block;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
     }
 
     .btn:hover {
@@ -146,10 +142,7 @@
       transform: scale(1.02);
     }
 
-    .cta-hero {
-      margin: 30px 0;
-    }
-
+    /* Freebie box */
     .freebie-box {
       background: #f8f5f1;
       border: 1px solid #e0dcd7;
@@ -165,12 +158,45 @@
       margin-bottom: 10px;
     }
 
+    /* Newsletter block */
     .substack-block {
       margin-top: 35px;
       background: #f4efe9;
       padding: 18px;
       border-radius: 12px;
       border: 1px solid #dfd9d1;
+    }
+
+    .newsletter-title {
+      font-family:'Noto Serif Display', serif;
+      font-size:1rem;
+      margin-bottom:10px;
+      color:#4a423b;
+    }
+
+    .newsletter-text {
+      font-size:0.9rem;
+      color:#5a534b;
+      margin-bottom:15px;
+      line-height:1.4;
+    }
+
+    .newsletter-btn {
+      background-color: #dcd2c7;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 1.02rem;
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+      transition: 0.3s;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .newsletter-btn:hover {
+      background-color: #d3c8bb;
+      transform: scale(1.02);
     }
 
     footer {
@@ -181,28 +207,12 @@
     }
 
     @media (max-width: 400px) {
-      .container {
-        padding: 30px 20px;
-        width: 90vw;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .subheading {
-        font-size: 0.9rem;
-      }
-      .btn {
-        font-size: 1rem;
-        padding: 13px 15px;
-      }
-      .logo {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 15px;
-      }
-      .nav {
-        gap: 20px;
-      }
+      .container { padding: 30px 20px; width: 90vw; }
+      h1 { font-size: 2rem; }
+      .subheading { font-size: 0.9rem; }
+      .btn { font-size: 1rem; padding: 13px 15px; }
+      .logo { width: 90px; height: 90px; margin-bottom: 15px; }
+      .nav { gap: 20px; }
     }
   </style>
 </head>
@@ -218,47 +228,43 @@
       <a href="product.html">Free Templates</a>
     </div>
 
+    <!-- Restored intro -->
     <p class="welcome-text">
-      A calm space for soft productivity, mindful organisation, and beautiful digital systems.
+      Welcome to Fleura Co 🌷  
+      A calm space for soft productivity, mindful organisation, and beautiful digital systems.  
+      Discover thoughtfully designed Notion templates and tools to help you plan, reset, and stay grounded with ease.
     </p>
 
-    <!-- VALUE PREVIEW -->
     <div class="value-preview">
       Tools for gentle planning, weekly resets, clarity, and slow intentional growth.
     </div>
 
-    <!-- HERO CTA -->
-    <div class="cta-hero">
-      <a href="product.html" class="btn">✨ Start Here: Download a Free Template</a>
-    </div>
-
-    <!-- FREEBIE HIGHLIGHT -->
+    <!-- Freebie CTA -->
     <div class="freebie-box">
-      <div class="freebie-title">🌿 Free: Weekly Reset Template</div>
+      <div class="freebie-title">Weekly Reset Template (Free)</div>
       <p style="font-size:0.9rem; color:#5a534b; margin-bottom:15px;">
-        A simple, calming system to reset your week with clarity.
+        A soft, grounding reset ritual for your week.
       </p>
-      <a href="product.html" class="btn">Download Free</a>
+      <a href="product.html" class="btn">Download Free Template</a>
     </div>
 
-    <!-- OTHER BUTTONS -->
-    <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">🛍 Template Library</a>
-    <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📸 Instagram</a>
-    <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📌 Pinterest</a>
+    <!-- Buttons with neutral icons -->
+    <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank">🗂 Template Library</a>
+    <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank">✧ Instagram</a>
+    <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank">✧ Pinterest</a>
 
-    <!-- SUBSTACK CTA -->
+    <!-- Newsletter -->
     <div class="substack-block">
-      <p style="font-family:'Noto Serif Display', serif; font-size:1rem; margin-bottom:10px; color:#4a423b;">
-        💌 Join the Fleura Letter
+      <p class="newsletter-title">Join the Weekly Newsletter</p>
+      <p class="newsletter-text">
+        A quiet space for clarity, gentle routines, and thoughtful reset moments — directly to your inbox.
       </p>
-      <p style="font-size:0.9rem; color:#5a534b; margin-bottom:15px;">
-        Gentle insights, resets, and soft productivity — delivered with calm intention.
-      </p>
-      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Subscribe</a>
+      <a href="https://fleuraco.substack.com/" class="newsletter-btn" target="_blank">Join Now</a>
     </div>
 
     <footer>crafted with care ✿</footer>
   </div>
 </body>
 </html>
+
 
