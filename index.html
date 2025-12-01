@@ -72,8 +72,20 @@
     .welcome-text {
       font-size: 0.95rem;
       color: #444;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       line-height: 1.6;
+    }
+
+    .value-preview {
+      font-size: 0.9rem;
+      color: #5a534b;
+      font-family: 'Noto Serif Display', serif;
+      background: #f6f2ed;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #e6ded6;
+      line-height: 1.5;
     }
 
     .nav {
@@ -117,12 +129,6 @@
       width: 100%;
     }
 
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
     .btn {
       background-color: #ebe3da;
       color: #000;
@@ -132,11 +138,39 @@
       font-size: 1.05rem;
       font-weight: 500;
       transition: background-color 0.3s ease, transform 0.2s ease;
+      display: block;
     }
 
     .btn:hover {
       background-color: #e3d9ce;
       transform: scale(1.02);
+    }
+
+    .cta-hero {
+      margin: 30px 0;
+    }
+
+    .freebie-box {
+      background: #f8f5f1;
+      border: 1px solid #e0dcd7;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 35px;
+    }
+
+    .freebie-title {
+      font-family: 'Noto Serif Display', serif;
+      color: #4a423b;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .substack-block {
+      margin-top: 35px;
+      background: #f4efe9;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #dfd9d1;
     }
 
     footer {
@@ -185,16 +219,42 @@
     </div>
 
     <p class="welcome-text">
-      Welcome to Fleura Co 🌷<br>
-      A calm space for soft productivity, mindful organisation, and beautiful digital systems.  
-      Discover thoughtfully designed Notion templates and tools to help you plan, reset, and stay grounded with ease.
+      A calm space for soft productivity, mindful organisation, and beautiful digital systems.
     </p>
 
-    <div class="buttons">
-      <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">🛍 Template Library</a>
-      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">💌 Substack Reads</a>
-      <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📸 Instagram</a>
-      <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📌 Pinterest</a>
+    <!-- VALUE PREVIEW -->
+    <div class="value-preview">
+      Tools for gentle planning, weekly resets, clarity, and slow intentional growth.
+    </div>
+
+    <!-- HERO CTA -->
+    <div class="cta-hero">
+      <a href="product.html" class="btn">✨ Start Here: Download a Free Template</a>
+    </div>
+
+    <!-- FREEBIE HIGHLIGHT -->
+    <div class="freebie-box">
+      <div class="freebie-title">🌿 Free: Weekly Reset Template</div>
+      <p style="font-size:0.9rem; color:#5a534b; margin-bottom:15px;">
+        A simple, calming system to reset your week with clarity.
+      </p>
+      <a href="product.html" class="btn">Download Free</a>
+    </div>
+
+    <!-- OTHER BUTTONS -->
+    <a href="https://fleuraco.gumroad.com/" class="btn" target="_blank" rel="noopener">🛍 Template Library</a>
+    <a href="https://www.instagram.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📸 Instagram</a>
+    <a href="https://au.pinterest.com/fleuracodigitals/" class="btn" target="_blank" rel="noopener">📌 Pinterest</a>
+
+    <!-- SUBSTACK CTA -->
+    <div class="substack-block">
+      <p style="font-family:'Noto Serif Display', serif; font-size:1rem; margin-bottom:10px; color:#4a423b;">
+        💌 Join the Fleura Letter
+      </p>
+      <p style="font-size:0.9rem; color:#5a534b; margin-bottom:15px;">
+        Gentle insights, resets, and soft productivity — delivered with calm intention.
+      </p>
+      <a href="https://fleuraco.substack.com/" class="btn" target="_blank" rel="noopener">Subscribe</a>
     </div>
 
     <footer>crafted with care ✿</footer>
