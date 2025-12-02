@@ -9,98 +9,265 @@
   :root{
     --bg-panel: rgba(255,255,255,0.92);
     --muted: #6b6258;
-    --accent: #d8cfc2; /* soft beige */
-    --accent-dark: #bfa98e; /* darker brown */
+    --accent: #d8cfc2;
+    --accent-dark: #bfa98e;
     --text: #3d3a38;
     --soft-bg: #f6f2ed;
     --btn-brown: #e8ded1;
   }
 
   *{box-sizing:border-box}
-  html,body{height:100%; margin:0; background-image:url('background.jpg'); background-size:cover; background-position:center; font-family:'Inter',sans-serif; color:var(--text); -webkit-font-smoothing:antialiased}
+  html,body{
+    height:100%;
+    margin:0;
+    background-image:url('background.jpg');
+    background-size:cover;
+    background-attachment:fixed; /* FIX TOP-CUT + BOTTOM WHITE GAP */
+    background-position:center;
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+
   .container{
-    width:720px; max-width:95vw; margin:60px auto; padding:50px 40px;
-    background:var(--bg-panel); border-radius:14px; border:2px solid #d8d1c4;
+    width:720px;
+    max-width:95vw;
+    margin:70px auto 80px; /* gives space under card so background shows */
+    padding:50px 40px;
+    background:var(--bg-panel);
+    border-radius:14px;
+    border:2px solid #d8d1c4;
     box-shadow:0 6px 20px rgba(0,0,0,0.06);
     overflow:visible;
     transform:translateY(10px);
     animation:containerIn 520ms ease forwards;
+    text-align:center; /* CENTER EVERYTHING AT TOP */
   }
-  @keyframes containerIn{ from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)} }
 
-  .logo{ width:110px; height:110px; object-fit:contain; display:block; margin:0 auto 18px }
-  h1{font-family:'The Seasons',serif; font-size:2.4rem; margin:0 0 6px; letter-spacing:2px}
-  .subheading{font-family:'Noto Serif Display',serif; color:var(--muted); margin-bottom:16px}
+  @keyframes containerIn{
+    from{opacity:0; transform:translateY(20px)}
+    to{opacity:1; transform:translateY(0)}
+  }
 
-  /* nav with center-expand underline */
-  .nav{ display:flex; justify-content:center; gap:28px; margin-bottom:18px; border-bottom:1px solid #e7e2db; padding-bottom:12px }
-  .nav a{ position:relative; text-decoration:none; color:var(--text); padding-bottom:8px; font-weight:500 }
+  .logo{
+    width:110px;
+    height:110px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 18px;
+  }
+
+  h1{
+    font-family:'The Seasons',serif;
+    font-size:2.4rem;
+    margin:0 0 6px;
+    letter-spacing:2px;
+    text-align:center; /* ensure perfect centering */
+  }
+
+  .subheading{
+    font-family:'Noto Serif Display',serif;
+    color:var(--muted);
+    margin-bottom:16px;
+    text-align:center;
+  }
+
+  /* nav improved underline */
+  .nav{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    margin-bottom:18px;
+    border-bottom:1px solid #e7e2db;
+    padding-bottom:12px;
+  }
+  .nav a{
+    position:relative;
+    text-decoration:none;
+    color:var(--text);
+    padding-bottom:8px;
+    font-weight:500;
+  }
   .nav a::after{
-    content:''; position:absolute; left:50%; bottom:0; transform:translateX(-50%) scaleX(0);
-    height:2px; width:60%; background:var(--accent-dark); transform-origin:center; transition: transform .28s cubic-bezier(.2,.9,.2,1);
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%) scaleX(0);
+    height:2px;
+    width:70%; /* thicker, more visible */
+    background:var(--accent-dark);
+    transition:transform .28s cubic-bezier(.2,.9,.2,1);
     border-radius:2px;
   }
-  .nav a:hover::after, .nav a.active::after{ transform: translateX(-50%) scaleX(1); }
-
-  /* intro: italic serif, fade-in stagger */
-  .intro{ font-family:'Noto Serif Display',serif; font-style:italic; color:#4a433c; line-height:1.6; margin:0 0 14px; opacity:0; animation:introIn 700ms ease 120ms forwards }
-  @keyframes introIn{ to{opacity:1} }
-
-  .value{ background:var(--soft-bg); border:1px solid #e6ded6; padding:14px; border-radius:10px; color:#5a534b; font-family:'Noto Serif Display',serif; margin:14px 0 22px; font-size:0.95rem; opacity:0; animation:introIn 700ms ease 220ms forwards }
-
-  /* step blocks */
-  .step{ background:#fff; border-radius:12px; padding:18px 20px; margin-bottom:16px; box-shadow:0 3px 10px rgba(0,0,0,0.04); text-align:left }
-  .step .label{ font-size:0.78rem; text-transform:uppercase; letter-spacing:1px; color:#8b847b; margin-bottom:6px }
-  .step h2{ font-family:'Noto Serif Display',serif; margin:6px 0 8px; color:#35302b; font-size:1.1rem }
-  .step p{ color:#5a534b; margin:0 0 12px; line-height:1.45 }
-
-  /* Buttons */
-  .cta{ display:inline-block; width:100%; padding:12px 14px; border-radius:10px; text-decoration:none; font-weight:600; font-size:1rem; text-align:center; transition:transform .15s ease, box-shadow .15s ease }
-  .cta:active{ transform:translateY(1px) }
-  .cta-primary{ background:var(--btn-brown); color:var(--text); border:none; box-shadow:0 2px 8px rgba(0,0,0,0.04) }
-  .cta-primary:hover{ transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,0.06) }
-  .cta-outline{ background:transparent; border:1.25px solid #d6d0c7; color:var(--text) }
-  .cta-outline:hover{ background:rgba(0,0,0,0.02); transform:translateY(-2px) }
-
-  /* Explore buttons — stacked, centered, accent for template library */
-  .explore-list{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
-  .explore-list a{ padding:12px; border-radius:10px; text-decoration:none; color:var(--text); border:1px solid #eee; background:#fff; font-weight:600; display:block; text-align:center }
-  .explore-library{ background:var(--btn-brown); border:none }
-  .explore-library:hover{ background:var(--accent-dark); color:#fff }
-
-  .follow-note{ margin-top:10px; font-size:0.92rem; color:#7b756f; }
-
-  /* responsive fixes: prevent sideways expansion, center on mobile */
-  @media (max-width:640px){
-    .container{ width:92vw; padding:36px 20px; margin:28px auto }
-    .logo{ width:90px; height:90px }
-    .explore-list a{ width:100% }
+  .nav a:hover::after,
+  .nav a.active::after{
+    transform:translateX(-50%) scaleX(1);
   }
 
-  /* small accessibility / focus */
-  a:focus{ outline:3px solid rgba(191,169,142,0.15); outline-offset:3px; }
+  /* intro center + fade */
+  .intro{
+    font-family:'Noto Serif Display',serif;
+    font-style:italic;
+    color:#4a433c;
+    line-height:1.6;
+    margin:0 auto 14px;
+    max-width:560px;
+    opacity:0;
+    animation:introIn 700ms ease 120ms forwards;
+    text-align:center;
+  }
+  @keyframes introIn{ to{opacity:1} }
+
+  .value{
+    background:var(--soft-bg);
+    border:1px solid #e6ded6;
+    padding:14px;
+    border-radius:10px;
+    color:#5a534b;
+    font-family:'Noto Serif Display',serif;
+    margin:14px auto 22px;
+    font-size:0.95rem;
+    max-width:560px;
+    opacity:0;
+    animation:introIn 700ms ease 220ms forwards;
+    text-align:center;
+  }
+
+  /* steps (text left but container still centered) */
+  .step{
+    background:#fff;
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:16px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.04);
+    text-align:left;
+  }
+
+  .label{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#8b847b;
+    margin-bottom:6px;
+  }
+
+  .step h2{
+    font-family:'Noto Serif Display',serif;
+    margin:6px 0 8px;
+    color:#35302b;
+    font-size:1.16rem;
+  }
+
+  .step p{
+    color:#5a534b;
+    margin:0 0 12px;
+    line-height:1.45;
+  }
+
+  /* CTA buttons */
+  .cta{
+    display:inline-block;
+    width:100%;
+    padding:12px 14px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:1rem;
+    text-align:center;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+
+  .cta:active{ transform:translateY(1px) }
+
+  .cta-primary{
+    background:var(--btn-brown);
+    color:var(--text);
+    border:none;
+    box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  }
+  .cta-primary:hover{
+    transform:scale(1.025); /* slight expand */
+    background:#dccfbe; /* slightly darker */
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .cta-outline{
+    background:transparent;
+    border:1.25px solid #d6d0c7;
+    color:var(--text);
+  }
+  .cta-outline:hover{
+    background:rgba(0,0,0,0.02);
+    transform:scale(1.02);
+  }
+
+  /* Explore buttons */
+  .explore-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:10px;
+  }
+
+  .explore-list a{
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    display:block;
+    text-align:center;
+    background:var(--btn-brown); /* MAKE THEM BROWN */
+    border:none;
+    transition:transform .18s ease, background .18s ease;
+  }
+
+  .explore-list a:hover{
+    background:var(--accent-dark); /* slightly darker */
+    color:#fff;
+    transform:scale(1.025);
+  }
+
+  /* fix mobile sideways expansion */
+  @media (max-width:640px){
+    .container{
+      width:92vw;
+      padding:36px 20px;
+      margin:34px auto 60px;
+    }
+    .explore-list a{
+      width:100%;
+    }
+  }
+
+  a:focus{
+    outline:3px solid rgba(191,169,142,0.18);
+    outline-offset:3px;
+  }
+
 </style>
 </head>
+
 <body>
   <div class="container" role="main" aria-labelledby="brand-title">
     <img class="logo" src="Black%20Circle%20Modern%20Nails%20Studio%20Logo.png" alt="Fleura Co logo">
+
     <h1 id="brand-title">Fleura Co</h1>
     <div class="subheading">soft productivity • digital systems • intentional living</div>
 
-    <!-- top nav -->
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="product.html">Free Templates</a>
     </nav>
 
-    <!-- intro (fades in) -->
     <p class="intro">Welcome to Fleura Co 🌷
       A calm space for soft productivity, mindful organisation, and beautiful digital systems. Discover thoughtfully designed Notion templates and tools to help you plan, reset, and stay grounded with ease.
     </p>
 
     <div class="value">Tools for gentle planning, weekly resets, clarity, and slow intentional growth.</div>
 
-    <!-- STEP 1: Newsletter first (swapped) -->
+    <!-- STEP 1 -->
     <section class="step" aria-labelledby="step-two">
       <div class="label">Step 1</div>
       <h2 id="step-two">💌 Join the Weekly Newsletter</h2>
@@ -108,7 +275,7 @@
       <a href="https://fleuraco.substack.com/" target="_blank" rel="noopener" class="cta cta-outline">Join the Weekly Newsletter</a>
     </section>
 
-    <!-- STEP 2: Free template -->
+    <!-- STEP 2 -->
     <section class="step" aria-labelledby="step-one">
       <div class="label">Step 2</div>
       <h2 id="step-one">🌿 Free: Weekly Reset Template</h2>
@@ -116,25 +283,27 @@
       <a href="product.html" class="cta cta-primary">Claim your free Weekly Reset Planner</a>
     </section>
 
-    <!-- STEP 3: Explore (stacked, centered) -->
+    <!-- STEP 3 -->
     <section class="step" aria-labelledby="step-three">
       <div class="label">Step 3</div>
       <h2 id="step-three">✨ Explore</h2>
-      <p style="margin-bottom:8px">More ways to browse Fleura Co — explore tools and visual inspiration. Don't forget to follow on Instagram for soft productivity carousels and reset tips ♥</p>
+      <p style="margin-bottom:8px">More ways to browse Fleura Co — explore tools and visual inspiration. Don’t forget to follow on Instagram for soft productivity carousels and reset tips ♥</p>
 
       <div class="explore-list">
-        <a href="https://fleuraco.gumroad.com/" target="_blank" rel="noopener" class="explore-library">Template Library — Explore tools to help you plan, organise & reset</a>
+        <a href="https://fleuraco.gumroad.com/" target="_blank" rel="noopener">Template Library — Explore tools to help you plan, organise & reset</a>
         <a href="https://au.pinterest.com/fleuracodigitals/" target="_blank" rel="noopener">Pinterest — Visual ideas & reset checklists</a>
         <a href="https://www.instagram.com/fleuracodigitals/" target="_blank" rel="noopener">Instagram — Carousels on soft productivity & routines</a>
         <a href="https://fleuraco.substack.com/" target="_blank" rel="noopener">Substack — Archive & newsletter</a>
       </div>
-
     </section>
 
-    <footer style="font-family:'Noto Serif Display',serif; color:#7a746e; margin-top:12px;">crafted with care ✿</footer>
+    <footer style="font-family:'Noto Serif Display',serif; color:#7a746e; margin-top:20px; text-align:center;">
+      crafted with care ✿
+    </footer>
   </div>
 </body>
 </html>
+
 
 
 
