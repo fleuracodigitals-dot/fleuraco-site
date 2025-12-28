@@ -87,18 +87,20 @@
       color: #444;
       font-weight: 500;
       position: relative;
-      padding-bottom: 4px;
+      padding-bottom: 6px;
       transition: color 0.3s ease;
     }
 
+    /* Center-out underline */
     .nav a::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 50%;
       width: 0%;
       height: 2px;
       background-color: #bfa98e;
+      transform: translateX(-50%);
       transition: width 0.3s ease;
     }
 
@@ -117,7 +119,7 @@
       border: 1px solid #ccc;
       border-radius: 10px;
       overflow: hidden;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .kit-embed iframe {
@@ -131,7 +133,7 @@
       height: 320px;
       border: 1px solid #EEE;
       border-radius: 8px;
-      margin-top: 25px;
+      margin-top: 35px;
     }
 
     @media (max-width: 768px) {
@@ -167,9 +169,17 @@
     <p class="subheading">soft productivity • digital systems • intentional living</p>
 
     <div class="nav">
-      <!-- ✅ FIXED LINK -->
       <a href="https://fleuracodigitals-dot.github.io/fleuraco-site/">Home</a>
       <a href="product.html" class="active">Free Templates</a>
+    </div>
+
+    <!-- NEW: Clarity Reset Freebie -->
+    <div class="kit-embed">
+      <iframe 
+        src="https://fleura-co.kit.com/b0718b4bd7" 
+        title="Clarity Reset Freebie"
+        loading="lazy"
+      ></iframe>
     </div>
 
     <!-- Weekly Reset Freebie -->
@@ -201,6 +211,7 @@
   </div>
 </body>
 </html>
+
 
 
 
